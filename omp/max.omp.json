@@ -1,0 +1,160 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "white": "#FFFFFF",
+    "tan": "#CC3802",
+    "teal": "#047E84",
+    "plum": "#9A348E",
+    "blush": "#DA627D",
+    "salmon": "#FCA17D",
+    "sky": "#86BBD8",
+    "teal_blue": "#33658A"
+  },
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "p:plum",
+          "foreground": "p:white",
+          "leading_diamond": "\u256d\u2500\ue0b2",
+          "style": "diamond",
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "type": "os"
+        },
+        {
+          "background": "p:plum",
+          "foreground": "p:white",
+          "style": "diamond",
+          "template": "{{ .UserName }} ",
+          "type": "session"
+        },
+        {
+          "background": "p:blush",
+          "foreground": "p:white",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "always_enabled": true,
+            "style": "austin",
+            "threshold": 500
+          },
+          "style": "powerline",
+          "template": " {{ .FormattedMs }} ",
+          "type": "executiontime"
+        },
+        {
+          "background": "p:salmon",
+          "foreground": "p:white",
+          "properties": {
+            "style": "full",
+            "trailing_diamond": "\ue0b0"
+          },
+          "style": "diamond",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "p:sky",
+          "foreground": "p:white",
+          "style": "plain",
+          "type": "git"
+        },
+        {
+          "background": "p:teal_blue",
+          "background_templates": [
+            "{{ if gt .Code 0 }}#292929{{ end }}"
+          ],
+          "foreground": "p:white",
+          "properties": {
+            "always_enabled": true,
+            "display_exit_code": true
+          },
+          "style": "diamond",
+          "template": " {{ if gt .Code 0 }}\uf00d {{ .Meaning }}{{ else }}\uf00c{{ end }} ",
+          "trailing_diamond": "\ue0b4",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#a9ffb4",
+          "style": "plain",
+          "type": "text"
+        },
+        {
+          "foreground": "#a9ffb4",
+          "properties": {
+            "style": "dallas",
+            "threshold": 0
+          },
+          "style": "diamond",
+          "template": " {{ .FormattedMs }}s <#ffffff>\ue601</>",
+          "type": "executiontime"
+        },
+        {
+          "properties": {
+            "root_icon": "\uf292 "
+          },
+          "style": "diamond",
+          "template": " \uf0e7 ",
+          "type": "root"
+        },
+        {
+          "foreground": "#94ffa2",
+          "style": "diamond",
+          "template": " <#ffffff>CPU:</> {{ round .PhysicalPercentUsed .Precision }}% ",
+          "type": "sysinfo"
+        },
+        {
+          "foreground": "#81ff91",
+          "style": "diamond",
+          "template": "<#ffffff>\uf6dc</> <#ffffff>RAM:</> {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB ",
+          "type": "sysinfo"
+        },
+        {
+          "foreground": "#81ff91",
+          "foreground_templates": [
+            "{{ if eq \"Full\" .State.String }}#292929{{ end }}",
+            "{{ if eq \"Charging\" .State.String }}#40c4ff{{ end }}",
+            "{{ if eq \"Discharging\" .State.String }}#fb7e14{{ end }}"
+          ],
+          "properties": {
+            "charged_icon": "\uf240 ",
+            "charging_icon": "\uf583 ",
+            "discharging_icon": "\uf583 ",
+            "text": "\ue0b0"
+          },
+          "style": "powerline",
+          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }} \ue0b1",
+          "type": "battery"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "properties": {
+            "always_enabled": true
+          },
+          "background": "p:plum",
+          "foreground": "p:white",
+          "style": "diamond",
+          "leading_diamond": "\u2570\u2500\ue0b6",
+          "template": "\ufb26",
+          "trailing_diamond": "\ue0b4",
+          "type": "path"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
