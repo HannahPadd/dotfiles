@@ -104,16 +104,6 @@
           "foreground": "#a9ffb4"
         },
         {
-          "type": "executiontime",
-          "style": "diamond",
-          "foreground": "#a9ffb4",
-          "template": " {{ .FormattedMs }}s <#ffffff>\ue601</>",
-          "properties": {
-            "style": "dallas",
-            "threshold": 0
-          }
-        },
-        {
           "type": "root",
           "style": "diamond",
           "template": " \uf0e7 ",
