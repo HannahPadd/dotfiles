@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0px;
     /*font-family: VictorMono, Iosevka Nerd Font, Noto Sans CJK;*/
-    font-family: Iosevka, FontAwesome, Noto Sans CJK;
+    font-family: JetBrainsMono Nerd Font, FontAwesome, Noto Sans CJK;
     font-size: 14px;
     font-style: normal;
     min-height: 0;
@@ -55,6 +55,7 @@ window#waybar {
 
 #custom-power {
 	color: #24283b;
+	font-weight: bold;
 	background-color: #db4b4b;
 	border-radius: 5px;
 	margin-right: 10px;
@@ -85,7 +86,6 @@ window#waybar {
     font-weight: bold;
     /*border-left: solid 1px #282738;*/
 }
-
 
 #battery {
     color: #9ece6a;

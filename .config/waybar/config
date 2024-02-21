@@ -1,14 +1,14 @@
 {
     "position": "top",
     "layer": "top",
-    "height": 16,
+    "height": 40,
     "margin-top": 0,
     "margin-bottom": 0,
     "margin-left": 0,
     "margin-right": 0,
     "modules-left": ["custom/launcher", "hyprland/workspaces", "custom/playerctl", "custom/playerlabel"],
     "modules-center": ["cpu", "memory", "disk"],
-    "modules-right": ["tray", "custom/randwall", "network", "pulseaudio", "battery", "clock"],
+    "modules-right": ["tray", "custom/randwall", "network", "pulseaudio", "battery", "custom/power", "clock"],
     // Modules configuration
 	"clock": {
 		"format": " {:%H:%M}",
@@ -36,9 +36,12 @@
 			"active": "",
 			"default": "󰧞",
     "sort-by-number": true
-    },
-    },
-
+		},
+	},
+	"custom/power" : {
+		"format": "⏻",
+		"on-click" : "wlogout"
+	},
     "custom/playerctl": {
       "format": "{icon}",
       "return-type": "json",
@@ -142,9 +145,9 @@
     "on-click-right": "bash $HOME/.config/hypr/wall.sh"
   },
   "custom/launcher": {
-    "format": "󰈸",
+    "format": "󰣇",
     "on-click": "bash $HOME/.config/rofi/launcher.sh",
-//    "on-click": "wofi --show drun -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css",
+//    "on-click": "rofi --show drun -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css",
     "on-click-right": "bash $HOME/.config/rofi/run.sh"  
 //    "on-click-right": "wofi --show run -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css"  
   },
