@@ -84,6 +84,8 @@ for when you are first encountering a few different constructs in your Neovim co
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
+-- Start custom Imports --
+require("mappings")
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -258,15 +260,21 @@ require("lazy").setup({
 		priority = 1000,
 	},
 	{
+		"stevearc/overseer.nvim",
+		opts = {},
+	},
+
+	{
 		"IogaMaster/neocord",
 		event = "VeryLazy",
 	},
 	{
-		"Civitasv/cmake-tools.nvim",
-		opts = {},
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		config = true,
 	},
 	{
-		"stevearc/overseer.nvim",
+		"Civitasv/cmake-tools.nvim",
 		opts = {},
 	},
 	{
