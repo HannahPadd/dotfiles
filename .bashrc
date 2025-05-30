@@ -2,9 +2,6 @@
 # ~/.bashrc
 #
 
-export GTK_MODULES="unity-gtk-module"
-export SAL_USE_VCLPLUGIN=gtk
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 

@@ -52,19 +52,19 @@ white = "0xECEFF4"
 size = 12
 
 [font.normal]
-family = "JetBrainsMonoNL Nerd Font"
+family = "monospace"
 style = "Regular"
 
 [font.bold]
-family = "JetBrainsMonoNL Nerd Font"
+family = "monospace"
 style = "Bold"
 
 [font.italic]
-family = "JetBrainsMonoNL Nerd Font"
+family = "monospace"
 style = "Italic"
 
 [font.bold_italic]
-family = "JetBrainsMonoNL Nerd Font"
+family = "monospace"
 style = "Bold Italic"
 
 [selection]

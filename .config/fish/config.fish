@@ -1,4 +1,7 @@
-source ~/.config/fish/cachyos-config.fish
+source /usr/share/cachyos-fish-config/cachyos-config.fish
 
-oh-my-posh init fish --config ~/.omp/hannah.omp.json | source
-
+# overwrite greeting
+# potentially disabling fastfetch
+function fish_greeting
+	hyfetch
+end
