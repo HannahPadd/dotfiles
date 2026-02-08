@@ -1,4 +1,5 @@
 # .bashrc
+eval "$(oh-my-posh init bash --config ~/.omp/hannah.omp.json)"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -10,6 +11,8 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
@@ -23,3 +26,8 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+. "$HOME/.cargo/env"

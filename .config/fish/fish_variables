@@ -3,8 +3,9 @@
 SETUVAR --export WINEESYNC:1
 SETUVAR --export WINEFSYNC:1
 SETUVAR __fish_initialized:3800
+SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eedc/bass
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
@@ -34,4 +35,4 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/hannah/\x2ecargo/bin\x1e/home/hannah/\x2elocal/bin
+SETUVAR fish_user_paths:/home/hannah/Applications/Magikoopa\x1e/home/hannah/Projects/project\x2drestoration/tools\x1e/home/hannah/\x2ecargo/bin\x1e/home/hannah/\x2elocal/bin
